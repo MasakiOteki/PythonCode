@@ -40,11 +40,7 @@ if int(i) == 0:
     print("暗号化する数値を入力してください:")
     m = input()
     m_int = int(m)
-    # #mをバイト列に変換
-    # m_byte = m.encode('utf-8')
-    # print(m_byte)
-    # #m_byteを整数に変換
-    # m_int = int.from_bytes(m_byte,byteorder='big')
+    
     c = encryption(m_int,e,n)
     
     print(f'暗号化結果:{c}')
@@ -57,11 +53,6 @@ else:
     c_int = int(c)
     d_int = int(d)
     
-    c_int = decryption(c_int,d,n)
+    m = decryption(c_int,d_int,n)
     
-    print(c_int)
-    
-    
-    
-    
-    
+    print(m)
